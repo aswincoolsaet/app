@@ -1,0 +1,130 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import VIcon from './VIcon.vue';
+
+<Meta title='Icon' component={VIcon} />
+
+# Icon
+
+The icon component allows you to render any [Material Design Icons](https://material.io/icons). It also supports rendering of custom SVG based icons.
+
+<Preview mdxSource={`<v-icon name="person" color="--blue-grey" />`}>
+	<Story name='intro' height='40px'>{{
+	components: { VIcon },
+	template: '<v-icon name="person" color="--blue-grey" />',
+	}}</Story>
+</Preview>
+
+## Sizes / Colors
+
+The icon component supports multiple sizes and colors. The color prop accepts any valid CSS color. CSS variable names can be passed as well:
+
+<Preview mdxSource={`
+<v-icon name="star" color="--light-blue" sup />
+<v-icon name="accessibility_new" color="--red" x-small />
+<v-icon name="warning" color="--purple" small />
+<v-icon name="gesture" color="--blue" />
+<v-icon name="security" color="--green" large />
+<v-icon name="person" color="--orange" x-large />
+`}>
+	<Story name="sup" height="60px">
+		{{
+			components: { VIcon },
+			template: `<v-icon name="star" color="--light-blue" sup />`
+		}}
+	</Story>
+	<Story name="x-small" height="60px">
+		{{
+			components: { VIcon },
+			template: `<v-icon name="accessibility_new" color="--red" x-small />`
+		}}
+	</Story>
+	<Story name="small" height="60px">
+		{{
+			components: { VIcon },
+			template: `<v-icon name="warning" color="--purple" small />`
+		}}
+	</Story>
+	<Story name="default" height="60px">
+		{{
+			components: { VIcon },
+			template: `<v-icon name="gesture" color="--blue" />`
+		}}
+	</Story>
+	<Story name="large" height="60px">
+		{{
+			components: { VIcon },
+			template: `<v-icon name="security" color="--green" large />`
+		}}
+	</Story>
+	<Story name="x-large" height="60px">
+		{{
+			components: { VIcon },
+			template: `<v-icon name="person" color="--orange" x-large />`
+		}}
+	</Story>
+</Preview>
+
+| Prop Name      | Size in PX |
+|----------------|------------|
+| `sup`          | 8          |
+| `x-small`      | 12         |
+| `small`        | 18         |
+| None (default) | 24         |
+| `large`        | 36         |
+| `x-large`      | 48         |
+
+The `sup` size is meant to be used as superscript. For example the required state flag:
+
+<Preview mdxSource={`
+<span>Title<v-icon name="star" color="--red" sup /></span>
+`}>
+	<Story name="inline-sup" height="30px">
+		{{
+			components: { VIcon },
+			template: `<span>Title<v-icon name="star" color="--red" sup /></span>`
+		}}
+	</Story>
+</Preview>
+
+## Custom Size
+If the default sizes don't give you the exact size you require, you can add the `size` prop with any
+custom pixel value. Note: we recommend using one of the pre-defined sizes to ensure a consistent look
+across the platform.
+
+<Preview mdxSource={`
+<v-icon name="fastfood" color="--brown" :size="120" outline />
+`}>
+	<Story name="custom-size" height="120px">
+		{{
+			components: { VIcon },
+			template: `<v-icon name="fastfood" color="--brown" :size="120" outline />`
+		}}
+	</Story>
+</Preview>
+
+## Outline
+You can render the outline variant of the Material Icon by setting the `outline` property.
+
+<Preview mdxSource={`
+<v-icon name="archive" color="--amber" outline />
+`}>
+	<Story name="outline" height="24px">
+		{{
+			components: { VIcon },
+			template: `<v-icon name="archive" color="--amber" outline />`
+		}}
+	</Story>
+</Preview>
+
+## Props
+| Name      | Description                                                       | Default        |
+|-----------|-------------------------------------------------------------------|----------------|
+| `name`*   | Name of the icon                                                  | --             |
+| `color`   | CSS color variable name (fe `--blue-grey`) or CSS color value     | `currentColor` |
+| `outline` | Use outline Material Icons. Note: only works for non-custom icons | `false`        |
+| `size`    | Custom pixel size                                                 | `false`        |
+| `x-small` | Render the icon extra small                                       | `false`        |
+| `small`   | Render the icon small                                             | `false`        |
+| `large`   | Render the icon large                                             | `false`        |
+| `x-large` | Render the icon extra large                                       | `false`        |
+
