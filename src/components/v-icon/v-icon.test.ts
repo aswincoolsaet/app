@@ -4,7 +4,7 @@ import VueCompositionAPI from '@vue/composition-api';
 const localVue = createLocalVue();
 localVue.use(VueCompositionAPI);
 
-import VIcon from './VIcon.vue';
+import VIcon from './v-icon.vue';
 
 describe('Icon', () => {
 	it('Renders the correct markup for a Material Icon', () => {

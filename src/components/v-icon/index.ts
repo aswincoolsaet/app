@@ -1,4 +1,4 @@
-import VIcon from "./VIcon.vue";
+import VIcon from './v-icon.vue';
 
 export { VIcon };
 export default VIcon;

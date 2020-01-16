@@ -1,5 +1,5 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
-import VIcon from './VIcon.vue';
+import VIcon from './v-icon.vue';
 
 <Meta title='Icon' component={VIcon} />
 
@@ -78,7 +78,7 @@ The `sup` size is meant to be used as superscript. For example the required stat
 <Preview mdxSource={`
 <span>Title<v-icon name="star" color="--red" sup /></span>
 `}>
-	<Story name="inline-sup" height="30px">
+	<Story name="inline-sup" height="34px">
 		{{
 			components: { VIcon },
 			template: `<span>Title<v-icon name="star" color="--red" sup /></span>`
@@ -94,7 +94,7 @@ across the platform.
 <Preview mdxSource={`
 <v-icon name="fastfood" color="--brown" :size="120" outline />
 `}>
-	<Story name="custom-size" height="120px">
+	<Story name="custom-size" height="136px">
 		{{
 			components: { VIcon },
 			template: `<v-icon name="fastfood" color="--brown" :size="120" outline />`

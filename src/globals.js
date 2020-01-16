@@ -50,7 +50,7 @@ import VUpload from './components/upload.vue';
 import VProgressRing from './components/progress-ring.vue';
 import VContextualMenu from './components/contextual-menu.vue';
 
-import VIcon from './components/VIcon/';
+import VIcon from './components/v-icon/';
 import VTag from './components/tag.vue';
 
 import VItemSelect from './components/item-select/item-select.vue';
