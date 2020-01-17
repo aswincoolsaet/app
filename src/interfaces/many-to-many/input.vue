@@ -532,11 +532,6 @@ export default {
 			text-align: left;
 			transition: color var(--fast) var(--transition);
 		}
-
-		i {
-			vertical-align: top;
-			color: var(--input-icon-color);
-		}
 	}
 
 	.row {

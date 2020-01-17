@@ -82,7 +82,7 @@ export default {
 	cursor: pointer;
 
 	&:hover {
-		i {
+		.v-icon {
 			opacity: 1;
 		}
 	}
@@ -123,7 +123,7 @@ export default {
 		}
 	}
 
-	i {
+	.v-icon {
 		transition: opacity var(--fast) var(--transition);
 		position: absolute;
 		top: 6px;
