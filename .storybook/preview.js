@@ -5,3 +5,10 @@ Vue.use(VueCompositionAPI);
 
 import "../src/design/_fonts.scss";
 import "../src/design/_variables.scss";
+
+import { addParameters } from '@storybook/vue';
+addParameters({
+	docs: {
+		inlineStories: true
+	}
+});

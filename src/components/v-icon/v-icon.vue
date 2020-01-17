@@ -11,6 +11,7 @@
 
 <script lang="ts">
 import { createComponent, reactive, computed } from '@vue/composition-api';
+import getSizeClass from '@/utils/get-size-class';
 import CustomIconBox from './custom-icons/box.vue';
 
 const customIcons: string[] = ['box'];
@@ -102,6 +103,7 @@ export default createComponent({
 	&.sup {
 		width: 8px;
 		height: 8px;
+		vertical-align: 0px;
 
 		i {
 			font-size: 8px;

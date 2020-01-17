@@ -2,24 +2,11 @@ const path = require("path");
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
-	stories: ['../src/**/*.story.mdx'],
+	stories: ['../src/**/*.story.ts'],
 	addons: [
+		'@storybook/addon-notes/register',
 		'@storybook/addon-actions',
-		{
-			name: '@storybook/addon-docs',
-			options: {
-				babelOptions: {
-					presets: [
-						[
-							'@vue/cli-plugin-babel/preset',
-							{
-								jsx: false
-							}
-						]
-					]
-				}
-			}
-		}
+		'@storybook/addon-knobs'
 	],
 	webpackFinal: async (config, { configType }) => {
 		config.module.rules.push({

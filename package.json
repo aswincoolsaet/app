@@ -10,8 +10,8 @@
     "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "fix": "prettier --write \"src/**/*.{js,vue,ts}\"",
-    "storybook": "start-storybook -p 6006 --docs",
-    "build-storybook": "build-storybook --docs"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@chenfengyuan/vue-qrcode": "^1.0.1",
@@ -63,8 +63,10 @@
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-optional-chaining": "^7.8.3",
     "@storybook/addon-actions": "^5.3.3",
-    "@storybook/addon-docs": "^5.3.3",
+    "@storybook/addon-centered": "^5.3.6",
+    "@storybook/addon-knobs": "^5.3.6",
     "@storybook/addon-links": "^5.3.3",
+    "@storybook/addon-notes": "^5.3.6",
     "@storybook/addons": "^5.3.3",
     "@storybook/vue": "^5.3.3",
     "@types/jest": "^24.0.19",
@@ -94,6 +96,7 @@
     "typescript": "^3.7.4",
     "vue-cli-plugin-storybook": "^1.1.0",
     "vue-template-compiler": "^2.6.10",
+    "vuepress": "^1.2.0",
     "webpack-merge": "^4.2.2"
   },
   "gitHooks": {
